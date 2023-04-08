@@ -1,0 +1,5 @@
+words = on, spaces = off
+
+layer english on top of french and make "on" moments the intersections, at least for the opening.
+
+
