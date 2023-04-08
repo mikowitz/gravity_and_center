@@ -21,7 +21,8 @@ defmodule GravityAndCenter.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:messiaen, github: "mikowitz/messiaen"}
+      {:messiaen, github: "mikowitz/messiaen"},
+      {:xairo, github: "mikowitz/xairo"}
     ]
   end
 end
