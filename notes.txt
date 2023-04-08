@@ -2,4 +2,12 @@ words = on, spaces = off
 
 layer english on top of french and make "on" moments the intersections, at least for the opening.
 
+"multiphonics" based on a mapping of alphabet to sax keys? Will these be distinguishable? does it matter?
+
+start on single pitch (D or Ab, I think, are the ones with the most possibilities in the quartet range), and maybe end on a different, single pitch?
+
+"nothing" in line 11 should be a big pause?
+
+sound of water poured into a bowl. airy sounds with a bit of pitch? or do we bring in water bowls as "instruments"? too much? can it be done so it's not?
+
 
