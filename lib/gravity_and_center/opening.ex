@@ -11,6 +11,14 @@ defmodule GravityAndCenter.Opening do
     normalize_lengths(lengths, 3600)
   end
 
+  def rounded_attack_points(line_no, lang \\ :en, include_spaces \\ false) do
+    durations(line_no, lang, include_spaces)
+    |> Enum.map(&(&1 / 60))
+    |> List.insert_at(0, 0.0)
+    |> Enum.scan(&+/2)
+    |> Enum.map(&GravityAndCenter.Utils.round_to_tuplet_point/1)
+  end
+
   defp normalize_lengths(lengths, total) do
     factor = total / Enum.sum(lengths)
     Enum.map(lengths, &round(&1 * factor))
