@@ -1,4 +1,11 @@
-defmodule GravityAndCenter.Opening do
+defmodule GravityAndCenter.A do
+  @moduledoc """
+  I'm sorry I cannot say I love you when you say
+  you love me.
+  """
+
+  import GravityAndCenter.Utils
+
   def durations(line_no, lang \\ :en, include_spaces \\ false) do
     line = Enum.at(GravityAndCenter.text(), line_no - 1)
 
@@ -18,22 +25,7 @@ defmodule GravityAndCenter.Opening do
     |> Enum.scan(&+/2)
     |> Enum.map(&GravityAndCenter.Utils.round_to_tuplet_point/1)
   end
-
-  defp normalize_lengths(lengths, total) do
-    factor = total / Enum.sum(lengths)
-    Enum.map(lengths, &round(&1 * factor))
-  end
-
-  defp generate_lengths_without_spaces(line, lang) do
-    line
-    |> String.split(" ", trim: true)
-    |> Enum.map(fn word ->
-      Messiaen.lengths(word, lang) |> Enum.sum()
-    end)
-  end
-
-  defp generate_lengths_with_spaces(line, lang) do
-    generate_lengths_without_spaces(line, lang)
-    |> Enum.intersperse(Messiaen.length(?\s))
-  end
 end
+
+# Notes:
+# Total: ~1'15"

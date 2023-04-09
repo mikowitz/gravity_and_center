@@ -19,6 +19,22 @@ defmodule GravityAndCenter.Utils do
 
     floor(x) + rounded_frac
   end
-end
 
-# 0 0.2 0.25 0.3333 0.4 0.5 0.6 0.6667 0.75 0.8 1
+  def normalize_lengths(lengths, total) do
+    factor = total / Enum.sum(lengths)
+    Enum.map(lengths, &round(&1 * factor))
+  end
+
+  def generate_lengths_without_spaces(line, lang) do
+    line
+    |> String.split(" ", trim: true)
+    |> Enum.map(fn word ->
+      Messiaen.lengths(word, lang) |> Enum.sum()
+    end)
+  end
+
+  def generate_lengths_with_spaces(line, lang) do
+    generate_lengths_without_spaces(line, lang)
+    |> Enum.intersperse(Messiaen.length(?\s))
+  end
+end
