@@ -43,34 +43,9 @@ defmodule GravityAndCenter.B do
     MovementCalculator.beats_for(@optimal_beats_count, bari_count() * 2)
   end
 
-  def divisions_ly(sax) do
-    content =
-      divisions(sax)
-      |> Enum.map(fn
-        3 -> "  \\tuplet 3/2 { c8 c8 c8 }"
-        4 -> "  c16 c16 c16 c16"
-        5 -> "  \\tuplet 5/4 { c16 c16 c16 c16 c16 }"
-      end)
-      |> Enum.join("\n")
-
-    contents =
-      [
-        ~s(\\version "2.24.1"),
-        ~s(\\language "english"),
-        "",
-        "\\header {",
-        " title = \"#{sax}\"",
-        "  tagline = ##f",
-        "  instrument = \"#{sax}\"",
-        "}",
-        "",
-        "\\new RhythmicStaff {",
-        content,
-        "}"
-      ]
-      |> Enum.join("\n")
-
-    File.write("priv/b/#{sax}.ly", contents)
+  def generate(sax) do
+    reduce_talea_pattern(sax)
+    |> __MODULE__.LilyPatternParser.parse_pattern(sax)
   end
 
   def talea(mod) do
@@ -195,6 +170,105 @@ defmodule GravityAndCenter.B do
       |> Enum.each(&IO.write(file, "#{inspect(&1)}\n"))
     end)
   end
+
+  def reduce_talea_pattern(sax) do
+    full_talea_patterns()
+    |> Enum.map(&talea_with_rests/1)
+    |> List.flatten()
+    |> Enum.reject(&(&1 == 0))
+    |> Enum.chunk_every(2, 1)
+    |> Enum.map(fn
+      [x, x] when is_integer(x) -> {"t", x}
+      [x, _] -> x
+      [x] -> x
+    end)
+    |> Enum.reduce({[], []}, fn next, {curr, acc} ->
+      total = __MODULE__.Totals.get_total(sax, length(acc))
+
+      cond do
+        get_sum(curr) == total ->
+          {[], [{curr, total} | acc]}
+
+        get_sum(curr) > total ->
+          remainder = get_sum(curr) - total
+
+          # List.update_at(curr, -1, fn
+          [curr_last, next] =
+            case List.last(curr) do
+              {0, n} -> [{0, n - remainder}, {0, remainder}]
+              {"t", n} -> [{n - remainder, "t", get_int(next)}, {remainder, "t"}]
+              n when is_integer(n) -> [{n - remainder, "t", get_int(next)}, remainder]
+            end
+
+          # end)
+          curr = List.replace_at(curr, -1, curr_last)
+
+          {[next], [{curr, total} | acc]}
+
+        true ->
+          case get_sum(curr) + get_int(next) do
+            n when n == total ->
+              next =
+                case next do
+                  {0, n} -> {n, "r", get_int(next)}
+                  {"t", n} -> {n, "t", get_int(next)}
+                  n -> {n, "n", get_int(next)}
+                end
+
+              addend = curr ++ [next]
+              {[], [{addend, total} | acc]}
+
+            n when n < total ->
+              next =
+                case next do
+                  {0, n} -> {n, "r", get_int(next)}
+                  {"t", n} -> {n, "t", get_int(next)}
+                  n -> {n, "n", get_int(next)}
+                end
+
+              next_curr = curr ++ [next]
+              {next_curr, acc}
+
+            n when n > total ->
+              last = total - get_sum(curr)
+              next_int = get_int(next) - last
+
+              case next do
+                {0, _} ->
+                  addend =
+                    case last do
+                      0 -> curr
+                      _ -> curr ++ [{last, "r"}]
+                    end
+
+                  {[{next_int, "r"}], [{addend, total} | acc]}
+
+                _ ->
+                  addend =
+                    case last do
+                      0 -> curr
+                      _ -> curr ++ [{last, "t", get_int(next)}]
+                    end
+
+                  {[next_int], [{addend, total} | acc]}
+              end
+          end
+      end
+    end)
+    |> elem(1)
+    |> Enum.reverse()
+  end
+
+  defp get_sum(l) when is_list(l) do
+    Enum.map(l, &get_int/1)
+    |> Enum.sum()
+  end
+
+  defp get_int({"t", e}) when is_integer(e), do: e
+  defp get_int({0, e}) when is_integer(e), do: e
+  defp get_int({e, _}) when is_integer(e), do: e
+  defp get_int({e, _, _}) when is_integer(e), do: e
+  defp get_int(e) when is_integer(e), do: e
 
   defp modify_talea(talea, n) do
     case n < 0 do
