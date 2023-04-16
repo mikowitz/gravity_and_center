@@ -330,3 +330,11 @@
   \tuplet 5/4 { d16 d4 ~^\markup { 4 } }
   \tuplet 5/4 { d4^\markup { 4 } d16 ~^\markup { 5 } }
 }
+
+\layout {
+  \context {
+    \Score
+    proportionalNotationDuration = #(ly:make-moment 1/48)
+    \override SpacingSpanner.uniform-stretching = ##t
+  }
+}

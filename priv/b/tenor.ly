@@ -401,3 +401,11 @@
   \tuplet 3/2 { d8 d4 ~^\markup { 4 } }
   \tuplet 3/2 { d4 d8 ~^\markup { 5 } }
 }
+
+\layout {
+  \context {
+    \Score
+    proportionalNotationDuration = #(ly:make-moment 1/48)
+    \override SpacingSpanner.uniform-stretching = ##t
+  }
+}

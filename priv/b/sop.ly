@@ -329,7 +329,7 @@
 \layout {
   \context {
     \Score
-    proportionalNotationDuration = #(ly:make-moment 1/20)
+    proportionalNotationDuration = #(ly:make-moment 1/48)
     \override SpacingSpanner.uniform-stretching = ##t
   }
 }

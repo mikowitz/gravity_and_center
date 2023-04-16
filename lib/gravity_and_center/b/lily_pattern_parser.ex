@@ -73,6 +73,17 @@ defmodule GravityAndCenter.B.LilyPatternParser do
       IO.write(f, ~s(\\language "english"\n))
       IO.write(f, "\n")
       IO.write(f, beats)
+      IO.write(f, "\n\n")
+
+      IO.write(f, """
+      \\layout {
+        \\context {
+          \\Score
+          proportionalNotationDuration = #(ly:make-moment 1/48)
+          \\override SpacingSpanner.uniform-stretching = ##t
+        }
+      }
+      """)
     end)
   end
 end

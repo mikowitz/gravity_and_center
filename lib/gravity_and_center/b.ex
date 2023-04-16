@@ -244,13 +244,13 @@ defmodule GravityAndCenter.B do
                   {[{next_int, "r"}], [{addend, total} | acc]}
 
                 _ ->
-                  addend =
+                  [addend, next] =
                     case last do
-                      0 -> curr
-                      _ -> curr ++ [{last, "t", get_int(next)}]
+                      0 -> [curr, next_int]
+                      _ -> [curr ++ [{last, "t", get_int(next)}], next_int]
                     end
 
-                  {[next_int], [{addend, total} | acc]}
+                  {[next], [{addend, total} | acc]}
               end
           end
       end
