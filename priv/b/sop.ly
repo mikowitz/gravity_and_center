@@ -326,6 +326,11 @@
   \tuplet 5/4 { d8. d8 ~^\markup { 5 } }
 }
 
+\header {
+  tagline = ##f
+  instrument = "sop"
+}
+
 \layout {
   \context {
     \Score

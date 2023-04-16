@@ -331,6 +331,11 @@
   \tuplet 5/4 { d4^\markup { 4 } d16 ~^\markup { 5 } }
 }
 
+\header {
+  tagline = ##f
+  instrument = "bari"
+}
+
 \layout {
   \context {
     \Score

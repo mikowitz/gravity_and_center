@@ -43,6 +43,10 @@ defmodule GravityAndCenter.B do
     MovementCalculator.beats_for(@optimal_beats_count, bari_count() * 2)
   end
 
+  def generate do
+    for sax <- ~w(sop alto tenor bari)a, do: generate(sax)
+  end
+
   def generate(sax) do
     reduce_talea_pattern(sax)
     |> __MODULE__.LilyPatternParser.parse_pattern(sax)

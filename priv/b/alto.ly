@@ -402,6 +402,11 @@
   \tuplet 3/2 { d4 d8 ~^\markup { 5 } }
 }
 
+\header {
+  tagline = ##f
+  instrument = "alto"
+}
+
 \layout {
   \context {
     \Score

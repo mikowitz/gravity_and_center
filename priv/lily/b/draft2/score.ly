@@ -8,8 +8,8 @@
 
 \score {
   \context StaffGroup = "Saxophone Quartet" <<
-    \context Staff = "Soprano" { \sop }
-    % \context Staff = "Alto" { \alto }
+    % \context Staff = "Soprano" { \sop }
+    \context Staff = "Alto" { \alto }
     % \context Staff = "Tenor" { \tenor }
     % \context Staff = "Baritone" { \bari }
   >>
@@ -18,7 +18,7 @@
 \layout {
   \context {
     \Score
-    proportionalNotationDuration = #(ly:make-moment 1/20)
+    proportionalNotationDuration = #(ly:make-moment 1/36)
     \override SpacingSpanner.uniform-stretching = ##t
     \shape #'((-1.5 . 0) (-1 . 0) (-0.5 . 0) (0 . 0)) RepeatTie
     \override RepeatTie.X-extent = ##f
@@ -46,10 +46,11 @@
 
 \paper {
   #(set-paper-size "my size")
+  tagline = ##f
   indent = 0
   top-margin = 0.75\in
   bottom-margin = 0.75\in
   left-margin = 1\in
   right-margin = 1\in
-  system-system-spacing.minimum-distance = 10
+  system-system-spacing.minimum-distance = 20
 }

@@ -76,6 +76,11 @@ defmodule GravityAndCenter.B.LilyPatternParser do
       IO.write(f, "\n\n")
 
       IO.write(f, """
+      \\header {
+        tagline = ##f
+        instrument = "#{sax}"
+      }
+
       \\layout {
         \\context {
           \\Score
