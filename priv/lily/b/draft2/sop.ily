@@ -1,5 +1,6 @@
 sop = \relative c' {
   % 1
+  % \accidentalStyle neo-modern-cautionary
   \tempo 4 = 80
   \tuplet 5/4 { d8 ef8. }
   \tuplet 5/4 { d8 cs16 d8 }
@@ -8,7 +9,7 @@ sop = \relative c' {
   | % 2
   \tuplet 5/4 { d8. cs16 r16 }
   \tuplet 5/4 { d4 e16 ~ }
-  \tuplet 5/4 { e8. af8 ~ }
+  \tuplet 5/4 { e8. af,8 ~ }
   \tuplet 5/4 { af8. cs16 d16 ~ }
   | % 3
   \tuplet 5/4 { d16 cs16 af8. ~ }
@@ -24,7 +25,7 @@ sop = \relative c' {
   \tuplet 5/4 { ef8 e8. ~ }
   \tuplet 5/4 { e16 d8 ef8 ~ }
   \tuplet 5/4 { ef16 cs16 r16 af8 ~ }
-  \tuplet 5/4 { af8. ef8 ~ }
+  \tuplet 5/4 { af8. ef'8 ~ }
   | % 6
   \tuplet 5/4 { ef4 e16 ~ }
   \tuplet 5/4 { e8. r8 }
@@ -33,7 +34,7 @@ sop = \relative c' {
   | % 7
   \tuplet 5/4 { af8. cs16 af16 ~ }
   \tuplet 5/4 { af4 cs16 }
-  \tuplet 5/4 { e4 af16 ~ }
+  \tuplet 5/4 { e4 af,16 ~ }
   \tuplet 5/4 { af4 cs16 }
   | % 8
   \tuplet 5/4 { d4 af16 ~ }
@@ -78,7 +79,7 @@ sop = \relative c' {
   | % 16
   \tuplet 5/4 { d8 e16 r8 }
   \tuplet 5/4 { r8 a8. ~ }
-  \tuplet 5/4 { a8 e16 cs8 ~ }
+  \tuplet 5/4 { a8 e16 cs'8 ~ }
   \tuplet 5/4 { cs8 a8. ~ }
   | % 17
   \tuplet 5/4 { a8 d8. }
@@ -109,7 +110,7 @@ sop = \relative c' {
   \tuplet 5/4 { e16 d4 ~ }
   \tuplet 5/4 { d8 cs8. ~ }
   \tuplet 5/4 { cs16 ef8 d8 ~ }
-  \tuplet 5/4 { d16 e16 r16 a8 ~ }
+  \tuplet 5/4 { d16 e16 r16 a,8 ~ }
   | % 23
   \tuplet 5/4 { a8. d8 ~ }
   \tuplet 5/4 { d4 cs16 ~ }
@@ -141,23 +142,23 @@ sop = \relative c' {
   \tuplet 5/4 { f4 a16 ~ }
   \tuplet 5/4 { a4 f16 ~ }
   | % 29
-  \tuplet 5/4 { f8. a8 ~ }
+  \tuplet 5/4 { f8. a,8 ~ }
   \tuplet 5/4 { a8. d16 ef16 ~ }
   \tuplet 5/4 { ef16 d16 a8. ~ }
-  \tuplet 5/4 { a8 ef8 e16 ~ }
+  \tuplet 5/4 { a8 ef'8 e16 ~ }
   | % 30
-  \tuplet 5/4 { e8 ef8 a16 ~ }
+  \tuplet 5/4 { e8 ef8 a,16 ~ }
   \tuplet 5/4 { a4 d16 }
   a4
-  \tuplet 5/4 { d16 f,4 } % MOD
+  \tuplet 5/4 { d16 f4 }
   | % 31
-  a4
+  a,4
   \tuplet 5/4 { d16 ef4 }
   a,4
   \tuplet 5/4 { d16 e4 ~ }
   | % 32
   \tuplet 5/4 { e8 ef8 d16 ~ }
-  \tuplet 5/4 { d16 f,4 } % MOD
+  \tuplet 5/4 { d16 f4 }
   \tuplet 5/4 { ef8 e8. }
   \tuplet 5/4 { ef8 d16 ef8 }
   | % 33
@@ -184,7 +185,7 @@ sop = \relative c' {
   d4 ~
   \tuplet 5/4 { d8 af8 g16 ~ }
   \tuplet 5/4 { g8 af8 d16 ~ }
-  \tuplet 5/4 { d4 g,16 ~ } % MOD
+  \tuplet 5/4 { d4 g16 ~ }
   | % 38
   \tuplet 5/4 { g8 fs8. ~ }
   fs4
@@ -192,33 +193,33 @@ sop = \relative c' {
   \tuplet 5/4 { fs4 g16 ~ }
   | % 39
   \tuplet 5/4 { g8 fs8. ~ }
-  \tuplet 5/4 { fs16 g8. d16 ~ }
+  \tuplet 5/4 { fs16 g8. d'16 ~ }
   d4 ~
   \tuplet 5/4 { d4 fs16 ~ }
   | % 40
   fs4 ~
-  \tuplet 5/4 { fs8 g8. }
+  \tuplet 5/4 { fs8 g,8. }
   \tuplet 5/4 { af8 g8. }
-  fs4 ~
+  fs'4 ~
   | % 41
   fs4 ~
   \tuplet 5/4 { fs8. d8 ~ }
   \tuplet 5/4 { d8. fs8 ~ }
-  \tuplet 5/4 { fs8 g8. }
+  \tuplet 5/4 { fs8 g,8. }
   | % 42
-  d4
-  \tuplet 5/4 { g8. d8 ~ }
+  d'4
+  \tuplet 5/4 { g,8. d'8 ~ }
   d4 ~
   d4 ~
   | % 43
   \tuplet 5/4 { d8. fs8 ~ }
   \tuplet 5/4 { fs8 d8. ~ }
-  \tuplet 5/4 { d8 g8. }
+  \tuplet 5/4 { d8 g,8. }
   \tuplet 5/4 { af8 g8. }
   | %44
-  d4 ~
+  d'4 ~
   d4
-  \tuplet 5/4 { g8. d8 ~ }
+  \tuplet 5/4 { g,8. d'8 ~ }
   \tuplet 5/4 { d8. af8 }
   | % 45
   d4
@@ -227,11 +228,11 @@ sop = \relative c' {
   \tuplet 5/4 { d8 af8 g16 ~ }
   | % 46
   g4
-  d4
+  d'4
   \tuplet 5/4 { af8 fs'8. ~ } % MOD
   fs4
   | % 47
-  \tuplet 5/4 { a8. af8 ~ }
+  \tuplet 5/4 { a,8. af8 ~ }
   \tuplet 5/4 { af8 d8. ~ }
   d4 ~
   d4 ~
@@ -274,12 +275,12 @@ sop = \relative c' {
   d4 ~
   \tuplet 5/4 { d8. bf8 ~ }
   \tuplet 5/4 { bf8 a8. }
-  \tuplet 5/4 { bf4 d16 ~ }
+  \tuplet 5/4 { bf4 d,16 ~ }
   | % 56
   d4 ~
-  \tuplet 5/4 { d4 af16 ~ }
+  \tuplet 5/4 { d4 af'16 ~ }
   \tuplet 5/4 { af16 r16 af8 g16 }
-  \tuplet 5/4 { af8 d8. ~ }
+  \tuplet 5/4 { af8 d,8. ~ }
   | % 57
   d4 ~
   \tuplet 5/4 { d8 bf8. ~ }
@@ -313,8 +314,8 @@ sop = \relative c' {
   | % 63
   \tuplet 5/4 { g4 c16 ~ }
   \tuplet 5/4 { c8 d16 r8 }
-  \tuplet 5/4 { r8 g8. ~ }
-  \tuplet 5/4 { g8 d16 b8 ~ }
+  \tuplet 5/4 { r8 g,8. ~ }
+  \tuplet 5/4 { g8 d'16 b8 ~ }
   | % 64
   \tuplet 5/4 { b8 g8. ~ }
   \tuplet 5/4 { g8 c8. }
@@ -326,7 +327,7 @@ sop = \relative c' {
   \tuplet 5/4 { c8 g8. ~ }
   \tuplet 5/4 { g8 b8. ~ }
   | % 66
-  \tuplet 5/4 { b16 cs8 d16 g16 ~ }
+  \tuplet 5/4 { b16 cs8 d16 g,16 ~ }
   g4 ~
   \tuplet 5/4 { g4 cs16 ~ }
   \tuplet 5/4 { cs16 g4 ~ }
@@ -366,7 +367,7 @@ sop = \relative c' {
   g4 ~
   \tuplet 5/4 { g8. d8 ~ }
   | % 74
-  \tuplet 5/4 { d16 cs8 g8 ~ }
+  \tuplet 5/4 { d16 cs8 g'8 ~ }
   g4 ~
   \tuplet 5/4 { g8. d8 ~ }
   \tuplet 5/4 { d16 g4 ~ }

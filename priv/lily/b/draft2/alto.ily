@@ -14,7 +14,7 @@ alto = \relative c' {
   d4
   e4
   % 3
-  af4 ~
+  af,4 ~
   af16 cs16 d8
   cs16 af8. ~
   af8 d8
@@ -40,11 +40,11 @@ alto = \relative c' {
   r4
   % 8
   cs16 d8. ~
-  d16 af8. ~
+  d16 af'8. ~
   af8 cs16 af16 ~
   af4
   % 9
-  e'4
+  e4
   af4 ~
   af16 cs16 d8 ~
   d8 af8 ~
@@ -156,7 +156,7 @@ alto = \relative c' {
   % 31
   e16 ef8 a,16 ~ % MOD
   a4
-  f4 ~
+  f'4 ~
   f4
   % 32
   a4 ~
@@ -180,19 +180,19 @@ alto = \relative c' {
   d16 a16 af8
   % 36
   a16 d8. ~
-  d8 af8
+  d8 af'8
   g8. af16 ~
-  af16 d8. ~
+  af16 d,8. ~
   % 37
-  d8 a16 d16 ~
+  d8 a'16 d,16 ~
   d4
   fs4
   d4 ~
   % 38
-  d16 a16 af8 ~
-  af8 d8 ~
+  d16 a'16 af8 ~
+  af8 d,8 ~
   d8. a16
-  g4 ~
+  g'4 ~
   % 39
   g8 af8
   \tuplet 3/2 { a4 fs8 ~ }
@@ -214,7 +214,7 @@ alto = \relative c' {
   \tuplet 3/2 { af4 g8 ~ }
   \tuplet 3/2 { g4 af8 ~ }
   % 43
-  \tuplet 3/2 { af8 d4 ~ }
+  \tuplet 3/2 { af8 d,4 ~ }
   d4
   g4 ~
   g4
@@ -286,7 +286,7 @@ alto = \relative c' {
   % 57
   d4
   g4 ~
-  \tuplet 3/2 { g4 cs8 ~ }
+  \tuplet 3/2 { g4 cs,8 ~ }
   cs4 ~
   % 58
   \tuplet 3/2 { cs8 c4 ~ }
@@ -350,7 +350,7 @@ alto = \relative c' {
   ef4
   % 70
   g4 ~
-  \tuplet 3/2 { g4 cs8 ~ }
+  \tuplet 3/2 { g4 cs,8 ~ }
   \tuplet 3/2 { cs8 r8 cs8 ~ }
   \tuplet 3/2 { cs8 c8 cs8 ~ }
   % 71
@@ -365,7 +365,7 @@ alto = \relative c' {
   g4 ~
   % 73
   \tuplet 3/2 { g8 c8 r8 }
-  \tuplet 3/2 { r8 ef4 ~ }
+  \tuplet 3/2 { r8 ef,4 ~ }
   \tuplet 3/2 { ef4 d8 ~ }
   d4 ~
   % 74
@@ -392,7 +392,7 @@ alto = \relative c' {
   c,4
   \tuplet 3/2 { cs4 d8 ~ }
   d4 ~
-  \tuplet 3/2 { d8 c8 r8 }
+  \tuplet 3/2 { d8 \parenthesize c8 r8 }
 
 
 
