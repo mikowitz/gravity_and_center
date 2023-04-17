@@ -58,7 +58,7 @@ bari = \relative c' {
   \tuplet 5/4 { cs16 r4 }
   \tuplet 5/4 { r16 d8 ef8 ~ }
   \tuplet 5/4 { ef16 cs16 d8 e16 ~ }
-  \tuplet 5/4 { e8.[ \bar "||" ef8] }
+  \tuplet 5/4 { e8.[ ef8] }
   | % 13
   \tuplet 5/4 { r8. d8 ~ }
   \tuplet 5/4 { d16 ef8 d8 ~ }
@@ -116,7 +116,7 @@ bari = \relative c' {
   \tuplet 5/4 { e16 r16 a8. ~ }
   | % 24
   \tuplet 5/4 { a8 d,8. ~ } % MOD
-  \tuplet 5/4 { d4 \bar "||" f16 ~ }
+  \tuplet 5/4 { d4 f16 ~ }
   \tuplet 5/4 { f8. e8 ~ }
   \tuplet 5/4 { e16 ef8 f8 ~ }
   | % 25
@@ -172,7 +172,7 @@ bari = \relative c' {
   | % 35
   \tuplet 5/4 { e8. f8 ~ }
   \tuplet 5/4 { f8. e8 ~ }
-  \tuplet 5/4 { e16 [ ef8 \bar "||" g8 ] ~ }
+  \tuplet 5/4 { e16 [ ef8 g8 ] ~ }
   \tuplet 5/4 { g16 af8 d,8 ~ } % MOD
   | % 36
   d4
@@ -230,7 +230,7 @@ bari = \relative c' {
   \tuplet 5/4 { af8 d8. ~ }
   d4 ~
   | % 47
-  \tuplet 5/4 { d8. \bar "||" af8 }
+  \tuplet 5/4 { d8. af8 }
   a4 ~
   \tuplet 5/4 { a16 d4 ~ }
   \tuplet 5/4 { d16 af8 bf8 ~ }
@@ -287,7 +287,7 @@ bari = \relative c' {
   | % 58
   \tuplet 5/4 { r16 af8 g16 af16 ~ }
   \tuplet 5/4 { af16 d4 ~ }
-  \tuplet 5/4 { d16 \bar "||" g4 ~ }
+  \tuplet 5/4 { d16 g4 ~ }
   \tuplet 5/4 { g16 b,4 }
   | % 59
   g4
@@ -343,7 +343,7 @@ bari = \relative c' {
   \tuplet 5/4 { b8. cs8 }
   \tuplet 5/4 { d8 b8. ~ }
   \tuplet 5/4 { b16 c8. cs16 ~ }
-  \tuplet 5/4 { cs8. \bar "||" d8 ~ }
+  \tuplet 5/4 { cs8. d8 ~ }
   | % 70
   \tuplet 5/4 { d16 g4 ~ }
   g4 ~

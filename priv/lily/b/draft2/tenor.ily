@@ -41,7 +41,7 @@ tenor = \relative c' {
   af8 cs16 af16 ~
   af4
   % 9
-  e4
+  e'4
   af4 ~
   af16 cs16 d8 ~
   d8 af8 ~
@@ -58,7 +58,6 @@ tenor = \relative c' {
    % 12
   e8 r16 cs16
   e4
-  \bar "||"
   r8 ef8
   e16 d8.
   % 13
@@ -115,7 +114,6 @@ tenor = \relative c' {
   ef8 r8
   e8. ef16 ~
   ef16 e16 r8
-  \bar "||"
   d16 f8. ~
   % 24
   f16 ef8. ~
@@ -171,7 +169,7 @@ tenor = \relative c' {
   a8. f16 ~
   f8. e16 ~
   e8 a8 ~
-  a8. \bar "||" fs16 ~
+  a8. fs16 ~
   % 35
   fs8. d16 ~
   d4 ~
@@ -224,7 +222,7 @@ tenor = \relative c' {
   g4 ~
   % 45
   \tuplet 3/2 { g4 a8 }
-  \tuplet 3/2 { af4 \bar "||" a8 ~ }
+  \tuplet 3/2 { af4 a8 ~ }
   \tuplet 3/2 { a4 af8 ~ }
   \tuplet 3/2 { af8 a4 ~ }
   % 46
@@ -280,7 +278,7 @@ tenor = \relative c' {
   % 56
   a4
   d4 ~
-  \tuplet 3/2 { d4 \bar "||" cs8 ~ }
+  \tuplet 3/2 { d4 cs8 ~ }
   \tuplet 3/2 { cs8 g4 ~ }
   % 57
   g4 ~
@@ -337,7 +335,6 @@ tenor = \relative c' {
   \tuplet 3/2 { b4 g8 ~ }
   g4 ~
   g4 ~
-  \bar "||"
   % 68
   g4 ~
   g4 ~

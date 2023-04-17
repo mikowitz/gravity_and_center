@@ -8,11 +8,12 @@
 
 \score {
   \context StaffGroup = "Saxophone Quartet" <<
-    % \context Staff = "Soprano" { \sop }
+    \context Staff = "Soprano" { \sop }
     \context Staff = "Alto" { \alto }
-    % \context Staff = "Tenor" { \tenor }
-    % \context Staff = "Baritone" { \bari }
+    \context Staff = "Tenor" { \tenor }
+    \context Staff = "Baritone" { \bari }
   >>
+  \midi {}
 }
 
 \layout {
@@ -52,5 +53,5 @@
   bottom-margin = 0.75\in
   left-margin = 1\in
   right-margin = 1\in
-  system-system-spacing.minimum-distance = 20
+  system-system-spacing.minimum-distance = 15
 }

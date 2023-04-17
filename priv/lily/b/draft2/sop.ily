@@ -1,5 +1,6 @@
 sop = \relative c' {
   % 1
+  \tempo 4 = 80
   \tuplet 5/4 { d8 ef8. }
   \tuplet 5/4 { d8 cs16 d8 }
   \tuplet 5/4 { cs16 e4 ~ }
@@ -57,7 +58,6 @@ sop = \relative c' {
   | % 12
   \tuplet 5/4 { e8 d8 r16 }
   \tuplet 5/4 { r8 ef8. ~ }
-  \bar "||"
   \tuplet 5/4 { ef8 d8. ~ }
   \tuplet 5/4 { d8. e8 }
   | % 13
@@ -116,7 +116,7 @@ sop = \relative c' {
   \tuplet 5/4 { cs8. d8 ~ }
   \tuplet 5/4 { d16 ef8 cs8 ~ }
   | % 24
-  \tuplet 5/4 { cs8[ \bar "||" e,8.] } % MOD
+  \tuplet 5/4 { cs8[ e,8.] } % MOD
   a4
   \tuplet 5/4 { r16 d,8. r16 }
   \tuplet 5/4 { d16 e8. f16 ~ }
@@ -173,7 +173,6 @@ sop = \relative c' {
   | % 35
   \tuplet 5/4 { f4 e16 ~ }
   e4
-  \bar "||"
   \tuplet 5/4 { af8 a16 af8 }
   g4 ~
   | % 36
@@ -231,7 +230,6 @@ sop = \relative c' {
   d4
   \tuplet 5/4 { af8 fs'8. ~ } % MOD
   fs4
-  \bar "||"
   | % 47
   \tuplet 5/4 { a8. af8 ~ }
   \tuplet 5/4 { af8 d8. ~ }
@@ -291,7 +289,6 @@ sop = \relative c' {
   d4 ~
   d4 ~
   d4 ~
-  \bar "||"
   \tuplet 5/4 { d16 r8 b8 ~ }
   | % 59
   \tuplet 5/4 { b8 g8. ~ }
@@ -348,7 +345,6 @@ sop = \relative c' {
   \tuplet 5/4 { g16 b4 }
   g4 ~
   g4
-  \bar "||"
   | % 70
   \tuplet 5/4 { ef4 g16 ~ }
   g4 ~
