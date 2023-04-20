@@ -1,7 +1,7 @@
 sop = \relative c' {
   % 1
   % \accidentalStyle neo-modern-cautionary
-  \tempo 4 = 80
+  \tempo 4 = 96
   \tuplet 5/4 { d8 ef8. }
   \tuplet 5/4 { d8 cs16 d8 }
   \tuplet 5/4 { cs16 e4 ~ }
