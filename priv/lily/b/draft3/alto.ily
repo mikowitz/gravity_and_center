@@ -275,10 +275,10 @@ alto = \relative c' {
   d4 ~
   \tuplet 3/2 { d8 g4 ~ }
   g4 ~
+  g4 ~
+  g4 ~
+  g4 ~
+  g4 ~
+  g4 ~
   g4
-  \tuplet 3/2 { cs,4 d8 ~ }
-  d4 ~
-  d4 ~
-  d4 ~
-  d4
 }
