@@ -34,31 +34,17 @@ defmodule GravityAndCenter.C do
       |> Enum.map(fn {_, v} -> Enum.map(v, &elem(&1, 0)) end)
       |> IO.inspect()
 
-    max = Enum.map(parts, &Enum.sum/1) |> Enum.max()
+    # max = Enum.map(parts, &Enum.sum/1) |> Enum.max()
 
     Enum.map(parts, fn els ->
       total = Enum.sum(els)
-      factor = max / total
-      Enum.map(els, &Float.round(&1 * factor, 2))
+      factor = 56 / total
+      Enum.map(els, &Float.round(&1 * factor, 0))
     end)
     |> IO.inspect()
   end
 
   def part_1_drawing do
-    # lines =
-    #   part_1()
-    #   |> Enum.with_index()
-    #   |> Enum.group_by(fn {_, i} -> rem(i, 4) end)
-    #   |> Enum.map(fn {k, v} -> {k, Enum.map(v, &(elem(&1, 0) * 100))} end)
-    #   |> IO.inspect()
-
-    # lines = [
-    #   {0, [900, 700, 500, 100, 400, 200, 200, 100]},
-    #   {1, [400, 400, 100, 1100, 100, 400, 200, 700]},
-    #   {2, [200, 400, 400, 200, 200, 400, 400]},
-    #   {3, [200, 400, 200, 100, 400, 1100, 900]}
-    # ]
-
     image =
       Xairo.Image.new(
         "c-part1.png",
@@ -69,18 +55,57 @@ defmodule GravityAndCenter.C do
       |> Xairo.paint()
       |> Xairo.set_source(Xairo.Rgba.new(0, 0, 0))
 
-    # part_1()
+    [
+      # alto
+      [19.0, 14.0, 10.0, 2.0, 8.0, 4.0, 4.0, 2.0],
+      # soprano
+      [8.0, 8.0, 5.0, 19.0, 2.0, 8.0, 4.0, 12.0],
+      # baritone
+      [6.0, 12.0, 12.0, 6.0, 8.0, 12.0, 10.0],
+      # tenor
+      [9.0, 8.0, 5.0, 3.0, 9.0, 15.0, 15.0]
+    ]
+    |> Enum.map(fn line -> Enum.map(line, &(&1 * 100)) end)
+    |> Enum.with_index()
+    |> Enum.reduce(image, fn {line, y_offset}, image ->
+      {image, _} =
+        Enum.reduce(line, {image, 0}, fn len, {image, start} ->
+          image =
+            Xairo.rectangle(image, {start, y_offset * 100}, len, 100)
+            |> Xairo.stroke()
+
+          {image, start + len}
+        end)
+
+      image
+    end)
+
+    image
+    |> Xairo.Image.save()
+  end
+
+  def part_2_drawing do
+    image =
+      Xairo.Image.new(
+        "c-part2.png",
+        5800,
+        400
+      )
+      |> Xairo.set_source(Xairo.Rgba.new(1, 1, 1))
+      |> Xairo.paint()
+      |> Xairo.set_source(Xairo.Rgba.new(0, 0, 0))
+
     # [
-    #   [10.0, 8.0, 5.0, 1.0, 4.0, 2.0, 2.0, 2.0],
-    #   [4.0, 4.0, 3.0, 9.0, 1.0, 4.0, 2.0, 7.0],
-    #   [3.0, 6.0, 6.0, 3.0, 4.0, 6.0, 6.0],
-    #   [2.0, 4.0, 2.0, 2.0, 4.0, 12.0, 8.0]
+    #   [6.0, 15.0, 6.0, 6.0, 3.0, 3.0, 1.0, 4.0, 13.0],
+    #   [2.0, 14.0, 7.0, 3.0, 2.0, 7.0, 7.0, 14.0, 2.0],
+    #   [5.0, 4.0, 7.0, 1.0, 5.0, 5.0, 15.0, 3.0, 10.0],
+    #   [4.0, 10.0, 2.0, 21.0, 2.0, 10.0, 2.0, 6.0]
     # ]
     [
-      [19.0, 14.0, 10.0, 2.0, 8.0, 4.0, 4.0, 2.0],
-      [8.0, 8.0, 5.0, 19.0, 2.0, 8.0, 4.0, 12.0],
-      [6.0, 12.0, 12.0, 6.0, 8.0, 12.0, 10.0],
-      [4.0, 8.0, 5.0, 3.0, 8.0, 21.0, 15.0]
+      [6.0, 15.0, 6.0, 6.0, 3.0, 3.0, 1.0, 4.0, 13.0],
+      [2.0, 12.0, 9.0, 3.0, 2.0, 7.0, 7.0, 14.0, 2.0],
+      [4.0, 9.0, 5.0, 19.0, 4.0, 8.0, 2.0, 6.0],
+      [5.0, 4.0, 7.0, 1.0, 5.0, 7.0, 14.0, 3.0, 10.0]
     ]
     |> Enum.map(fn line -> Enum.map(line, &(&1 * 100)) end)
     |> Enum.with_index()
