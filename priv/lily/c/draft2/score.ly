@@ -26,8 +26,8 @@
     tupletFullLength = ##t
 
     \override VerticalAxisGroup.staff-staff-spacing = #'(
-      (basic-distance . 8)
-      (minimum-distance . 10)
+      (basic-distance . 32)
+      (minimum-distance . 32)
       (padding . 4)
       (stretchability . 0)
     )
@@ -53,5 +53,5 @@
   bottom-margin = 0.75\in
   left-margin = 1\in
   right-margin = 1\in
-  system-system-spacing.minimum-distance = 10
+  system-system-spacing.minimum-distance = 16
 }

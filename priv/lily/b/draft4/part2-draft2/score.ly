@@ -15,6 +15,7 @@
     \context Staff = "Tenor" { \tenor }
     \context Staff = "Baritone" { \bari }
   >>
+  % \midi {}
 }
 
 \layout {
@@ -29,7 +30,7 @@
 
     \override VerticalAxisGroup.staff-staff-spacing = #'(
       (basic-distance . 8)
-      (minimum-distance . 8)
+      (minimum-distance . 20)
       (padding . 4)
       (stretchability . 0)
     )
@@ -37,8 +38,8 @@
 
   \context {
     \Staff
-    \override NoteHead.extra-spacing-width = #'(-1 . 1.5)
-    \override Rest.extra-spacing-width = #'(-1 . 1)
+    \override NoteHead.extra-spacing-width = #'(-1.5 . 1.5)
+    \override Rest.extra-spacing-width = #'(-1.5 . 1.5)
     % \override Flag.stencil = #modern-straight-flag
     \override Flag.stencil = #flat-flag
   }
@@ -48,11 +49,11 @@
 
 \paper {
   #(set-paper-size "my size")
+  tagline = ##f
   indent = 0
   top-margin = 0.75\in
   bottom-margin = 0.75\in
   left-margin = 1\in
   right-margin = 1\in
-  system-system-spacing.minimum-distance = 20
-  tagline = ##f
+  system-system-spacing.minimum-distance = 15
 }

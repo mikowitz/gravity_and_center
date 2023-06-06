@@ -15,6 +15,7 @@
     \context Staff = "Tenor" { \tenor }
     \context Staff = "Baritone" { \bari }
   >>
+  \midi {}
 }
 
 \layout {
@@ -29,7 +30,7 @@
 
     \override VerticalAxisGroup.staff-staff-spacing = #'(
       (basic-distance . 8)
-      (minimum-distance . 8)
+      (minimum-distance . 10)
       (padding . 4)
       (stretchability . 0)
     )
@@ -48,11 +49,11 @@
 
 \paper {
   #(set-paper-size "my size")
+  tagline = ##f
   indent = 0
   top-margin = 0.75\in
   bottom-margin = 0.75\in
   left-margin = 1\in
   right-margin = 1\in
-  system-system-spacing.minimum-distance = 20
-  tagline = ##f
+  system-system-spacing.minimum-distance = 15
 }

@@ -1,4 +1,9 @@
 defmodule GravityAndCenter.C do
+  # [0,2,4,7,8]
+  # [1,3,5,8,9]
+  # [1, 3, 5, 8, 9, 7, 0, 11, 4]
+  # [[1, 3, 5, 8, 9], [5, 7, 9, 0, 1], [9, 11, 1, 4, 5]]
+
   @moduledoc """
                               I want the force
   of attraction to crush the force of repulsion
@@ -27,7 +32,7 @@ defmodule GravityAndCenter.C do
 
   def part_2 do
     parts =
-      "to crush the force of the repulsion"
+      "to crush the force of repulsion"
       |> Messiaen.lengths(:en)
       |> Enum.with_index()
       |> Enum.group_by(fn {_, i} -> rem(i, 4) end)
@@ -48,7 +53,7 @@ defmodule GravityAndCenter.C do
     image =
       Xairo.Image.new(
         "c-part1.png",
-        6400,
+        6500,
         400
       )
       |> Xairo.set_source(Xairo.Rgba.new(1, 1, 1))
@@ -88,7 +93,7 @@ defmodule GravityAndCenter.C do
     image =
       Xairo.Image.new(
         "c-part2.png",
-        5800,
+        6000,
         400
       )
       |> Xairo.set_source(Xairo.Rgba.new(1, 1, 1))
@@ -102,10 +107,14 @@ defmodule GravityAndCenter.C do
     #   [4.0, 10.0, 2.0, 21.0, 2.0, 10.0, 2.0, 6.0]
     # ]
     [
-      [6.0, 15.0, 6.0, 6.0, 3.0, 3.0, 1.0, 4.0, 13.0],
-      [2.0, 12.0, 9.0, 3.0, 2.0, 7.0, 7.0, 14.0, 2.0],
-      [4.0, 9.0, 5.0, 19.0, 4.0, 8.0, 2.0, 6.0],
-      [5.0, 4.0, 7.0, 1.0, 5.0, 7.0, 14.0, 3.0, 10.0]
+      # [6.0, 15.0, 6.0, 6.0, 3.0, 3.0, 1.0, 4.0, 13.0],
+      # [2.0, 12.0, 9.0, 3.0, 2.0, 7.0, 7.0, 14.0, 2.0],
+      # [4.0, 9.0, 5.0, 19.0, 4.0, 8.0, 2.0, 6.0],
+      # [5.0, 4.0, 7.0, 1.0, 5.0, 7.0, 14.0, 3.0, 10.0]
+      [6.0, 16.0, 6.0, 6.0, 3.0, 3.0, 4.0, 13.0],
+      [2.0, 15.0, 8.0, 4.0, 2.0, 8.0, 15.0, 2.0],
+      [5.7, 6.0, 6.0, 2.0, 6.0, 17.0, 3.0, 11.0],
+      [5.0, 12.0, 2.0, 26.0, 2.0, 2.0, 7.0]
     ]
     |> Enum.map(fn line -> Enum.map(line, &(&1 * 100)) end)
     |> Enum.with_index()
