@@ -5,11 +5,11 @@ nad = {
 
 alto = \relative c'' {
   r2 \tuplet 3/2 { r4 a8 ~ } a4 ~
-  a1 ~
-  \tuplet 3/2 { a8 b4 ~ } b4 ~ b8 fs8 ~ fs4 ~
-  fs4 ~ \tuplet 3/2 { fs4 cs8 } ~ cs2 ~
-  \tuplet 3/2 { cs8 e4 ~ } e2 \nad f!4 ~
-  \nad f!1 ~
-  \nad f!8 f!8 ~ f4 ~ f2 ~
-  f2
+  \tuplet 3/2 { a4 r8 } r4 r2
+  \tuplet 3/2 { r8 b4 ~ } b4 ~ b8 fs8 ~ fs4 ~
+  fs8 r8 \tuplet 3/2 { r4 cs8 } ~ cs4 ~ \tuplet 3/2 { cs4 r8 }
+  \tuplet 3/2 { r8 e4 ~ } e4 ~ \tuplet 3/2 { e8 r4 } \nad f!4 ~
+  \nad f!4 r4 r2
+  r8 f!8 ~ f4 ~ f8 r8 r4
+  r2
 }

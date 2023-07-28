@@ -68,8 +68,8 @@ alto = \relative c' {
 
   % 7
 
-  r8 cs'8\f ( ~
-  cs16 fs8. ~
+  r8 cs8\f ( ~
+  cs16 fs'8. ~
 
   % 8
   fs8.  d16\> ~
@@ -146,38 +146,10 @@ alto = \relative c' {
   \tuplet 3/2 { a4( af8--  ~ }
   af8 ) d,8-- ~
   d8 \f r8
-  r4
-
-  % 13
-  d'16-.\pp a8-. bf16-.
-  r4
-  r4
-
-  % 14
-  r4
-  r
-  r
-  r
-  \tuplet 5/4 { r8 d8-.\p g,16-. }
-  r4
-  r4
-  r4
-  r4
-  r4
-  af8-.\mp r8
-  \tuplet 3/2 { d8-. r4  }
-  r4
-  r4
-  r
-  r
-  r
-
-  % 15
   
-  r
-  r
-  r
-  r16 ef8-.\mf cs16-.
+  r4 r4 r4 r4
+  
+  r16 ef'8-.\mf cs16-.
   \tuplet 3/2 { r8 d-. c-. }
   r4
   r4

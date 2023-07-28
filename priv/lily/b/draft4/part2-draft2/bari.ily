@@ -156,33 +156,8 @@ bari = \relative c' {
   r4
   r
 
-  r8. a''16-.\pp
-  r8 bf8-.
-  r4
-  r
-  r
-  r
-  r
-  r
-  r8 g8-.\p
-  d'8-. r8
-  r4
-  r
-  r
-  r
-  r
-  \tuplet 5/4 { r16 d8-.\mp r8 }
-  r4
-  r
-  r
-
-  % 15
- 
-  r4
-  r
-  r
-  r
-  r
+  r4 r4 r4 r4
+  
   \tuplet 3/2 { r8 d8-.\mf r8 }
   r4
   r16 ef16-. r8
@@ -194,7 +169,7 @@ bari = \relative c' {
   r
   r4
   r
-  r8 g,,8:64 \p \< ^\markup { flz. } ~
+  r8 g8:64 \p \< ^\markup { flz. } ~
   g4:32 ~
   g4:32
   ~
@@ -213,16 +188,16 @@ bari = \relative c' {
   r4
   r4
   d''4\p\< ~
-  d8 c8\mf\> ~
-  c4 ~
-  c4 ~
-  c4 ~
-  c4 ~
-  c4 ~
-  c4 ~
-  c4 ~
+  d8 c8:64\mp\> ~
+  c4:32 ~
+  c4:32 ~
+  c4:32 ~
+  c4:32 ~
+  c4:32 ~
+  c4:32 ~
+  c4:32 ~
   \after 8 \n
-  c4
+  c4:32
   r
   r
   r

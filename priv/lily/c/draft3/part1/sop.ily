@@ -1,10 +1,10 @@
 sop = \relative c''' {
-  a1 ~
-  a1 ~
-  \tuplet 3/2 { a4 gs8 ~ } gs4 ~ gs2 ~
-  gs2. ~ gs8 b,8 ~
-  b1 ~
-  \tuplet 3/2 { b8 cs4 ~ } \tuplet 3/2 { cs8 g4 ~ } g2 ~
-  g4 e2 f4 ~
-  f2
+  a2 r2
+  r1
+  \tuplet 3/2 { r4 gs8 ~ } gs4 ~ \tuplet 3/2 { gs4 r8 } r4
+  r2. ~ r8 b,8 ~
+  b4 ~ b8 r8 r2
+  \tuplet 3/2 { r8 cs4 ~ } \tuplet 3/2 { cs8 g4 ~ } g4 ~ \tuplet 3/2 { g8 r4 }
+  r4 e2 f4 ~
+  f4 r4
 }

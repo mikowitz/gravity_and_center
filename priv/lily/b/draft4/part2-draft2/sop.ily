@@ -42,7 +42,7 @@ sop = \relative c' {
   r4
   r4
   r4
-  
+
 
   r4
   r4
@@ -69,7 +69,7 @@ sop = \relative c' {
   cs16 fs8.-- ~
   fs4
 
-  
+
 
   % 9
   d4--\>
@@ -153,44 +153,20 @@ sop = \relative c' {
   r4
   r
 
-  
+
 
   % 15
-  r r r
-  r8 ] d8(\p\< ~
+  r 
 
-  % 16
-  d4 ~
-  \tuplet 3/2 { d4 cs8 ~ }
-  cs4 ~
-  cs4 ~
-  cs8 ) d8 ( ~
-  \tuplet 3/2 { d8 c8 d8 ~ }
-  d4 ~
-  \tuplet 3/2 { d4 c8 ~ }
-  c4 ~
-  c16 ) ef8( cs16 ~
-  cs8 ) d8 (
-  c4 ~
-  c8 ) d8 ( ~
-  d4
-  ef8 g8 ~
-  g4 ~
-  g4 ~
-  g8 \f)  r8
-
-  % 17
+  r4 r4 r4 r4
   r4
-  r
-  r
-  r4
-  r8 d8-.\f->
-  r8 c8-.->
+  r8 d''8-.\f->
+  r8 c,8-.->
   r4
   r
   r
   r
-  \tuplet 3/2 { r8  d4\mf(  ~ }
+  \tuplet 3/2 { r8  d,4\mf(  ~ }
 
   % 21
   d4 ~

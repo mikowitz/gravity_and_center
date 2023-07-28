@@ -159,45 +159,19 @@ tenor = \relative c' {
   r
 
   % 13
+
+  r4 r4 r4 r4
   
-  \clef treble
-  r
-  \tuplet 3/2 { r4 a'8-.\pp }
-  \tuplet 5/4 { r16 bf8-. r8 }
-
-  % 14
-  r4
-  r
-  r
-  r
-  r
-  \clef treble
-  \tuplet 3/2 { af8-.\p r8 d8-. }
-  r4
-  r4
-  r4
-  r4
-  r8 a8-.\mp
-  \tuplet 5/4 { r16 af8-. d16-. g,16-. }
-  % g4
-  r4
-  r
-  r
-  r
-  r
-  r
-
-  % 15
-  r
-  r
-  r
   \tuplet 3/2 { cs8-.\mf r8 d8-. }
   c8-. r8
   r4
   r4
   r
+    
+  \clef treble
+  
   r
-  \tuplet 3/2 { r4 ef8-.\f }
+  \tuplet 3/2 { r4 ef'8-.\f }
   cs8-. r8
   \tuplet 3/2 { d8-. r8 c8-. }
   r4
