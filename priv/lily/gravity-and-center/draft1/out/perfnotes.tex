@@ -1,0 +1,51 @@
+\documentclass{article}
+
+\usepackage{graphics}
+\begin{document}
+
+Documents for \verb+lilypond-book+ may freely mix music and text.
+
+For example,
+
+{%
+\parindent 0pt
+\noindent
+\ifx\preLilyPondExample \undefined
+\else
+  \expandafter\preLilyPondExample
+\fi
+\def\lilypondbook{}%
+\input{ac/lily-941a492d-systems.tex}%
+\ifx\postLilyPondExample \undefined
+\else
+  \expandafter\postLilyPondExample
+\fi
+}
+
+Options are put in brackets.
+
+\begin{quote}
+\noindent
+\begin{verbatim}
+\relative {
+  c'2 e2 \tuplet 3/2 { f8 a b } a2 e4
+}
+\end{verbatim}
+{%
+\parindent 0pt
+\noindent
+\ifx\preLilyPondExample \undefined
+\else
+  \expandafter\preLilyPondExample
+\fi
+\def\lilypondbook{}%
+\input{7d/lily-b12353a0-systems.tex}%
+\ifx\postLilyPondExample \undefined
+\else
+  \expandafter\postLilyPondExample
+\fi
+}
+\end{quote}
+
+
+\end{document}

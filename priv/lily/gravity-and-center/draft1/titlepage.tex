@@ -1,0 +1,53 @@
+\documentclass{article}
+
+\usepackage[papersize={12in, 9in}, margin=1.5in]{geometry}
+\usepackage{fontspec,graphicx,nopageno,tikz,xltxtra,xunicode}
+\usetikzlibrary{calc}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\usepackage{fontspec}
+\setmainfont{Liberation Serif}
+\newfontfamily\greekfont[Scale=MatchUppercase,Ligatures=TeX]{Liberation Serif}
+\defaultfontfeatures{Scale=MatchLowercase}
+\newlength{\drop}
+\parindent=0pt
+
+\begin{document}
+
+\begin{titlepage}
+
+\begin{tikzpicture}[remember picture, overlay]
+\draw[rounded corners=5pt, line width = 1.2pt]
+  ($(current page.north west) + (25mm, -21mm)$)
+  rectangle
+  ($(current page.south east) + (-25mm, 21mm)$);
+
+\end{tikzpicture}
+
+{
+\scalebox{5}[9]
+  {GRAVITY AND CENTER}
+}
+% \begin{flushright}
+\vspace{2em}
+
+{\scalebox{3}[4]{michael berkowitz}}
+% \end{flushright}
+
+\vfill
+
+
+
+\begin{flushright}
+\scalebox{1.5}[2]{\textit{for saxophone quartet}}
+\end{flushright}
+
+\vfill
+
+\begin{center}
+{\scalebox{1.5}[2]{2023}}
+\end{center}
+
+\end{titlepage}
+\end{document}
