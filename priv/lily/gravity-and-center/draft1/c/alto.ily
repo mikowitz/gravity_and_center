@@ -9,7 +9,9 @@ altoC = \relative c' {
   R1\fermata
   R1\fermata
   R1
-  r2 r4 r8 cs'8(\f ~
+  r2 r4 r8 
+  \shape #'((0 . -1) (0 . 1) (0 . 1) (0 . -1)) Slur
+  cs'8(\f ~
   cs16 fs8. ~ fs8. d16\> ~ d4 c!4 ~
   \tuplet 3/2 { c4 d8 ~ } \tuplet 3/2 { d8\mp) r4 } r2
   r4 \tuplet 5/4 { r16 cs,8-.\mf fs-.\mp } r2
@@ -19,7 +21,7 @@ altoC = \relative c' {
   fs8\p) r8 r4 r2
   R1*6/4
   R1
-  r2 \tuplet 3/2 { r8 d'4\p( ~ } d4 ~
+  r2 \tuplet 3/2 { r8 d'4\p(\< ~ } d4 ~
   d8 af8 ~ af4 ~ af8) d,8( ~ \tuplet 5/4 { d16 g16) d8.( ~ }
   \tuplet 5/4 { d8 g,8.) } \tuplet 3/2 { a4( af8 ~ } af8) d,8 ~ d8\f r8
   R1\fermata

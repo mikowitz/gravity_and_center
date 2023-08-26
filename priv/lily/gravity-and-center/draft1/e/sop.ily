@@ -3,7 +3,7 @@ sopE = \relative c' {
   r2 r8 ef-.\mp \tuplet 3/2 { r af-.\p r }
   R1
   \time 5/4
-  \tempo 4 = 88
+  \tempo 4 = 96
   r8 ef'-.\p \tuplet 3/2 { r4 e!8-.\mp } r4 \tuplet 3/2 { r8 af,4\fp\> ~ } af\fermata ~
   af4 ~ af8\n r8 r4 \tuplet 3/2 { r8 af-.\p r } r4
   R1*5/4\fermata
@@ -16,7 +16,14 @@ sopE = \relative c' {
   \tuplet 3/2 { r8 gs'4\pp ~ } gs4 ~ gs4 ^~
   \time 4/4
   <g, gs' ds'>1 ~
-  ^\multiSop
+  
+      \tweak Y-offset 0 
+    \tweak outside-staff-priority ##f
+    \tweak layer #100
+  ^\markup {
+    \translate #'(7 . 8)
+    \multiSop
+  }
   \after 4. \n
   2 \> r4 \tuplet 3/2 { r8 af-.\mp r8 }
   \time 6/4

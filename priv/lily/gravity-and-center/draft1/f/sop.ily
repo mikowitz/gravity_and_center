@@ -1,5 +1,10 @@
 sopF = \relative c' {
-  \tempo 4 = 60
+  \tempo \markup {
+    \concat {
+      \smaller \general-align #Y #DOWN \note {4} #1
+      " = 48 - 60 (poco rubato)"
+    }
+  }
   r2 r4 r8 af\mf\> ~
   af2:32 ~ \tuplet 5/4 { \after 8 \n af8. r8 } r4
   R1 * 6
@@ -19,8 +24,18 @@ sopF = \relative c' {
   r2 r8. af16\pp ~ af4 ~
   af8 r8 r4 r2
   R1 * 3
-  r4 \tuplet 5/4 { r8. <g, gs' ds'>8\pp
-  ^\multiSop
+  r4 \tuplet 5/4 { 
+    r8. 
+    <g, gs' ds'>8\pp
+    \tweak Y-offset 0 
+    \tweak outside-staff-priority ##f
+    \tweak layer #100
+    \tweak whiteout ##t
+    \tweak whiteout-style #'outline
+    ^\markup {
+      \translate #'(12 . 8)
+      \multiSop
+    }
   ~ } 2 ~
   2. ~ \tuplet 5/4 { 8 r8. }
   r2. r4 r8. af16\p\> ~ af4 ~

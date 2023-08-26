@@ -41,8 +41,7 @@ sopC = \relative c' {
   ef,2)\mf\> f4( e4
   d8) ef8(\p\< ~ ef4 ~ ef2
   d2\mf\> f8 a ~ a4 ~
-  \after 2. \pp
-  a1)
+  a1) ~
   \mark \default
   \bar "||"
 }

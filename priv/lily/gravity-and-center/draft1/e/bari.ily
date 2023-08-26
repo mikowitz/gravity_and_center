@@ -20,7 +20,13 @@ bariE = \relative c {
   \tweak Accidental.stencil #ly:text-interface::print
   \tweak Accidental.text \markup { \musicglyph #"accidentals.natural.arrowdown" }
   a'! f' bf d>2.\< ~
-  ^\multiBari
+    \tweak layer #100
+      \tweak Y-offset 0 
+    \tweak outside-staff-priority ##f
+  ^\markup {
+    \translate #'(7 . 8)
+    \multiBari
+  }
   \after 4.. \mf
   2 r8 a'-.\p r4 \tuplet 3/2 { r4 bf,8-. } r8. f16-.
   R1

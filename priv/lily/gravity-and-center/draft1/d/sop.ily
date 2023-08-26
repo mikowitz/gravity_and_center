@@ -1,7 +1,6 @@
 sopD = \relative c''' {
   \tempo 4 = 84
   a2\pp--
-  \repeatTie
   r2
   R1
   \tuplet 3/2 { r4 gs8\pp ~ } gs4 ~ gs4 r4
@@ -29,7 +28,13 @@ sopD = \relative c''' {
   g1)
   r2 g\pp\< ~
   <g gs' ds'>1\mp ~
-  ^\multiSop
+  ^\tweak layer #100
+      \tweak Y-offset 0 
+    \tweak outside-staff-priority ##f
+  ^\markup  {
+    \translate #'(9 . 7)
+    \multiSop
+  }
   \after 4. \n
   2 \> r2
   \tuplet 3/2 { c2(\p\< cs ds ~ }
@@ -53,7 +58,10 @@ sopD = \relative c''' {
   R1.
   \time 4/4
   r2 r4 <g gs' ds'>4\pp
-  ^\multiSop
+  ^\markup \with-dimensions-from \null {
+    \translate #'(-15 . 5)
+    \multiSop
+  }
   ~
   1 ~
   1

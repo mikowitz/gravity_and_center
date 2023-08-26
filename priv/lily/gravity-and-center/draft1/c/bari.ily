@@ -7,6 +7,7 @@ bariC = \relative c' {
   R1 * 3
   R1\fermata
   R1\fermata
+  \shape #'((0 . -4) (-1 . 4.5) (0 . 2) (0 . 0)) Slur
   cs,,4\f( fs''4 ~ fs4 ~ fs16 d8.\> ~
   d16 c!8. ~ \tuplet 3/2 { c4 d8 ~ } \tuplet 3/2 { d8\mp) r4 } r4
   R1

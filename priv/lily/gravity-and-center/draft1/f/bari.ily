@@ -38,14 +38,23 @@ bariF = \relative c' {
   \tuplet 5/4 { f4:32 r16 } r4 r4 r2.
   \time 4/4
   R1
-  r2. \tuplet 3/2 { r8 <
+  r2. \tuplet 3/2 { r8
+
+  <
     \tweak Accidental.stencil #ly:text-interface::print
     \tweak Accidental.text \markup { \musicglyph #"accidentals.natural.arrowdown" }
     a
     \tweak Accidental.stencil #ly:text-interface::print
     \tweak Accidental.text \markup { \musicglyph #"accidentals.natural.arrowdown" }
     a' f' bf d>4\pp ~
-    ^\multiBari
+    \tweak whiteout-style #'outline
+    \tweak whiteout ##t
+    \tweak Y-offset 0 
+    \tweak outside-staff-priority ##f
+    ^\markup {
+      \translate #'(-14 . 7)
+      \multiBari
+    }
   }
   2. ~ \tuplet 5/4 { 8 r8. }
   R1

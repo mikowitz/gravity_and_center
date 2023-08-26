@@ -37,7 +37,13 @@ altoF = \relative c' {
     \tweak Accidental.text \markup { \musicglyph #"accidentals.sharp.arrowdown" }
     cs'
   >4\pp ~
-  ^\multiAlto
+      \tweak Y-offset 0 
+      \tweak layer #100
+    \tweak outside-staff-priority ##f
+  ^\markup {
+    \translate #'(19 . 9)
+    \multiAlto
+  }
   1 ~
   1
   R1 * 3

@@ -38,7 +38,13 @@ bariD = \relative c {
     bf
     d
   >\pp ~
-  ^\multiBari
+      \tweak Y-offset 0 
+    \tweak outside-staff-priority ##f
+    \tweak layer #100
+  ^\markup {
+    \translate #'(17 . 8)
+    \multiBari
+  }
   1 ~
   2 r2.
   \tuplet 3/2 { a'2(\p\< b cs2 ~ }
@@ -59,7 +65,12 @@ bariD = \relative c {
     bf
     d
   >2\pp ~
-  ^\multiBari
+     \tweak Y-offset 0 
+    \tweak outside-staff-priority ##f
+ ^\markup {
+   \translate #'(-10 . 8)
+   \multiBari
+ }
   1
 
 

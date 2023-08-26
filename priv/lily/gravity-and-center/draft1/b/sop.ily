@@ -1,4 +1,10 @@
 sopB = \relative c' {
+  \tempo \markup {
+    \concat {
+      \smaller \general-align #Y #DOWN \note {4} #1
+      " = 60 (non rubato)"
+    }
+  }
   d2(\ppp ef2 ~
   ef4 d2) cs4(
   d2 cs4) e!4( ~

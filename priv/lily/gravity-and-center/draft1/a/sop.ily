@@ -1,5 +1,11 @@
 sopA = \relative c' {
-  \tempo 4 = 60
+%  \tempo 4 = 48 - 60
+  \tempo \markup {
+    \concat {
+      \smaller \general-align #Y #DOWN \note {4} #1
+      " = 48 - 60 (poco rubato)"
+    }
+  }
   R1 * 11
   r4 d4\pp ~ d2 ~
   d2 \> r16 \n r16 r8 r4

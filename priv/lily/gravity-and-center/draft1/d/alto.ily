@@ -70,7 +70,12 @@ altoD = \relative c'' {
     \tweak Accidental.text \markup { \musicglyph #"accidentals.sharp.arrowdown" }
     cs'
     >2\pp ~
-    ^\multiAlto
+        \tweak Y-offset 0 
+    \tweak outside-staff-priority ##f
+    ^\markup {
+      \translate #'(-15 . 8)
+      \multiAlto
+    }
   }
   \bar "||"
 

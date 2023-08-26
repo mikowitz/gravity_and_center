@@ -40,7 +40,12 @@ tenorD = \relative c {
     \tweak Accidental.text \markup { \musicglyph #"accidentals.natural.arrowdown" }
     g'!
   >4\pp
-  ^\multiTenor
+      \tweak Y-offset 0 
+    \tweak outside-staff-priority ##f
+  ^\markup {
+    \translate #'(-14 . 7)
+    \multiTenor
+  }
   ~ } 4 ~
   2 ~ 2. ~
   \after 2..\n
@@ -56,5 +61,10 @@ tenorD = \relative c {
   R2. * 3
   R1 * 2
   <b c' g'>1\pp
-  ^\multiTenor
+     \tweak Y-offset 0 
+    \tweak outside-staff-priority ##f
+ ^\markup {
+   \translate #'(-10 . 7)
+   \multiTenor
+ }
 }

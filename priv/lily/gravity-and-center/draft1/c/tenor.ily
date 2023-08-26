@@ -10,7 +10,13 @@ tenorC = \relative c' {
   \tuplet 5/4 { ef16 d8 cs16) d16(\p\< ~ } \tuplet 5/4 { d8 cs8 e16 ~ } e8 ef'8--\fermata \mf ) d,4(\mp\<
   \tuplet 3/2 { cs'4--\fermata\mf) d,8(\mp\< ~ } d8. e16 ~ e8. af16-- ~ af4\fermata\f)
   R1
-  r8. cs,16(\f ~ \tuplet 5/4 { cs8 fs'8. ~ } fs4 d4\> ~
+  r8. 
+  %\once \override Slur.control-points = #'((0 . 0) (0 . 2) (0 . 2) (0 . 0))
+  \shape #'((-1 . 3) (0 . -5) (0 . -12) (0 . 0)) Slur
+  cs,16(\f ~ 
+  \once \override TupletBracket.whiteout = ##t
+  \once \override TupletBracket.whiteout-style = #'outline
+  \tuplet 5/4 { cs8 fs'8. ~ } fs4 d4\> ~
   \tuplet 5/4 { d16 c!4 ~ } \tuplet 3/2 { c8 d4\mp) } r2
   R1
   r4 \clef bass d,,8-.\f r8 r8 c-.\p r4

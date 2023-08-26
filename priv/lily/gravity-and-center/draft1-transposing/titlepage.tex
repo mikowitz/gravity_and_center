@@ -1,0 +1,73 @@
+\documentclass{article}
+
+\usepackage[papersize={12in, 9in}, margin=1.5in]{geometry}
+\usepackage{fontspec,graphicx,nopageno,tikz,xltxtra,xunicode}
+\usetikzlibrary{calc}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\usepackage{fontspec}
+\setmainfont{Liberation Serif}
+\newfontfamily\greekfont[Scale=MatchUppercase,Ligatures=TeX]{Liberation Serif}
+\defaultfontfeatures{Scale=MatchLowercase}
+\newlength{\drop}
+\parindent=0pt
+
+\begin{document}
+
+\begin{titlepage}
+
+\begin{tikzpicture}[remember picture, overlay]
+\draw[rounded corners=5pt, line width = 1.2pt]
+  ($(current page.north west) + (1in, -0.75in)$)
+  rectangle
+  ($(current page.south east) + (-1in, 0.75in)$);
+
+\end{tikzpicture}
+
+  \begin{center}
+{
+\scalebox{5}[9]
+  {GRAVITY AND CENTER}
+}
+% \begin{center}
+
+  \vspace{1em}
+
+{
+  % \hspace{21em}
+  \scalebox{2}[3]
+  {after Henri Cole}
+}
+\end{center}
+
+% \vspace{1em}
+%
+%   \begin{flushright}
+% {
+%   \scalebox{2}[2]{after Henri Cole}
+% }
+%   \end{flushright}
+% \begin{flushright}
+% \vspace{2em}
+\vfill
+
+{\scalebox{3}[4]{michael berkowitz}}
+% \end{flushright}
+
+\vfill
+
+
+
+\begin{flushright}
+  \scalebox{1.5}[2]{\textit{for saxophone quartet (SATB)}}
+\end{flushright}
+
+\vfill
+
+\begin{center}
+{\scalebox{1.5}[2]{2023}}
+\end{center}
+
+\end{titlepage}
+\end{document}

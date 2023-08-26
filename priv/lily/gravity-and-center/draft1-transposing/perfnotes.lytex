@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage[papersize={12in, 9in}, margin=1.5in]{geometry}
+\parindent=0pt
+\parskip=12pt
+\begin{document}
+
+\begin{center}
+  {\Huge Performance Notes}
+\end{center}
+
+{\Large Multiphonics}
+
+Starting in section\hspace{-.5em}\lilypond{\markup { \box \bold "D" } } multiphonics that recur
+through the final sections of \textit{Gravity and Center} begin to appear. Each saxophone is given
+a single multiphonic. These fingerings and resulting pitches are taken from \textit{The Techniques of
+Saxophone Playing} by Marcus Weiss and Giorgio Netti.
+
+Each occurrence of a multiphonic is accompanied by its fingering and number from Weiss and Netti.
+
+\begin{lilypond}
+\end{lilypond}
+
+{\Large Techniques}
+
+\end{document}

@@ -38,8 +38,8 @@
 \score {
   \context StaffGroup = "Saxophone Quartet" <<
     \context Staff = "Soprano" \with {
-      instrumentName = "Soprano"
-      shortInstrumentName = "Sop."
+      instrumentName = "Soprano "
+      shortInstrumentName = "Sop. "
     } {
       \sopA
       \sopB
@@ -49,8 +49,8 @@
       \sopF
     }
     \context Staff = "Alto" \with {
-      instrumentName = "Alto"
-      shortInstrumentName = "Alto"
+      instrumentName = "Alto "
+      shortInstrumentName = "Alto "
     } {
       \altoA
       \altoB
@@ -60,8 +60,8 @@
       \altoF
     }
     \context Staff = "Tenor" \with {
-      instrumentName = "Tenor"
-      shortInstrumentName = "Ten."
+      instrumentName = "Tenor "
+      shortInstrumentName = "Ten. "
     } {
       \tenorA
       \tenorB
@@ -71,8 +71,8 @@
       \tenorF
     }
     \context Staff = "Baritone" \with {
-      instrumentName = "Baritone"
-      shortInstrumentName = "Bar."
+      instrumentName = "Baritone "
+      shortInstrumentName = "Bar. "
     } {
       \bariA
       \bariB
@@ -96,10 +96,12 @@
     tupletFullLength = ##t
     rehearsalMarkFormatter = #format-mark-box-letters
     \override RehearsalMark.font-size = #7
+    %\override System.show-vertical-skylines = ##t
+    %\override VerticalAxisGroup.show-vertical-skylines = ##t
 
     \override VerticalAxisGroup.staff-staff-spacing = #'(
       (basic-distance . 8)
-      (minimum-distance . 8)
+      (minimum-distance . 12)
       (padding . 4)
       (stretchability . 0)
     )
@@ -126,5 +128,58 @@
   left-margin = 1\in
   right-margin = 1\in
   system-system-spacing.minimum-distance = 20
+
+  system-separator-markup = \slashSeparator
+  print-first-page-number = ##f
+  print-page-number = ##t
+  ragged-right = ##f
+
   tagline = ##f
+
+  oddFooterMarkup = ""
+
+  evenFooterMarkup = \oddFooterMarkup
+  oddHeaderMarkup = \markup {
+    \fill-line {
+      \if \should-print-page-number {
+        \rounded-box {
+           \pad-around #.667 {
+             \concat {
+                      "Gravity and Center"
+                      \hspace #1.5
+                      \fontsize #2 { \bold "|" }
+                      \hspace #1.5
+                      \fromproperty #'page:page-number-string
+             }
+           }
+        }
+      }
+    }
+  }
+  evenHeaderMarkup = \oddHeaderMarkup
+
+  system-system-spacing = #'(
+    (basic-distance . 15)
+    (minimum-distance . 25)
+  )
+  markup-system-spacing = #'(
+    (basic-distance . 10)
+    (minimum-distance . 15)
+    (stretchability . 0)
+  )
+  top-system-spacing = #'(
+    (basic-distance . 10)
+    (minimum-distance . 15)
+  )
+  top-markup-spacing = #'(
+    (basic-distance . 0)
+    (minimum-distance . 0)
+  )
+  % left-margin = .5\in
+}
+
+\header {
+  title = "Gravity and Center"
+  subtitle = "After Henri Cole"
+  composer = "Michael Berkowitz"
 }
