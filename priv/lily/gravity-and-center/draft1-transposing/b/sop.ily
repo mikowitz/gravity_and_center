@@ -8,7 +8,7 @@ sopB = \relative c' {
   }
   d2(\ppp
   \tweak outside-staff-priority #2000
-  \tweak extra-offset #'(1 . -2)
+  \tweak extra-offset #'(1 . -1)
   ^\markup { \magnify #1.5 \bold "a narrow black room that is always dark"} 
   ef2 ~
   ef4 d2) cs4(
@@ -37,6 +37,7 @@ sopB = \relative c' {
                                                               cs8 
                                                               \tweak Y-offset #4
                                                               \fermata) }
+  \tweak extra-offset #'(0 . 2)
   \mark \default
   \bar "||"
 }

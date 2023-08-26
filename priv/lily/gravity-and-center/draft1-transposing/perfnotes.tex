@@ -2,12 +2,59 @@
 \usepackage[papersize={12in, 9in}, margin=1.5in]{geometry}
 \parindent=0pt
 \parskip=12pt
+\pagestyle{empty}
+\usepackage{fontspec}
+\setmainfont{Liberation Serif}
 \usepackage{graphics}
 \begin{document}
-
 \begin{center}
   {\Huge Performance Notes}
 \end{center}
+
+{\Large Techniques}
+
+\textbf{Fluttertongue}: this technique is marked by an unmeasured tremolo on a note's stem, and the text "flz".
+{%
+\parindent 0pt
+\noindent
+\ifx\preLilyPondExample \undefined
+\else
+  \expandafter\preLilyPondExample
+\fi
+\def\lilypondbook{}%
+\input{cb/lily-14f60778-systems.tex}%
+\ifx\postLilyPondExample \undefined
+\else
+  \expandafter\postLilyPondExample
+\fi
+}
+
+\textbf{Slow timbral trills}:
+This technique is indicated by the text "slow timbral trill" in the score.
+{%
+\parindent 0pt
+\noindent
+\ifx\preLilyPondExample \undefined
+\else
+  \expandafter\preLilyPondExample
+\fi
+\def\lilypondbook{}%
+\input{91/lily-f4bb5a68-systems.tex}%
+\ifx\postLilyPondExample \undefined
+\else
+  \expandafter\postLilyPondExample
+\fi
+}
+
+These trills should be played relatively slowly, but can, and should, have noticeable
+variation in trill speed.
+
+When more than one player has this direction at the same time, no effort should
+be made to coordinate the trill speeds; in fact, if anything, please try to keep them un-coordinated.
+
+Fingerings are left up to the player.
+
+\pagebreak
 
 {\Large Multiphonics}
 
@@ -19,7 +66,7 @@ Starting in section\hspace{-.5em}{%
   \expandafter\preLilyPondExample
 \fi
 \def\lilypondbook{}%
-\input{b4/lily-aee6d3d8-systems.tex}%
+\input{31/lily-a96023e8-systems.tex}%
 \ifx\postLilyPondExample \undefined
 \else
   \expandafter\postLilyPondExample
@@ -31,6 +78,7 @@ Saxophone Playing} by Marcus Weiss and Giorgio Netti.
 
 Each occurrence of a multiphonic is accompanied by its fingering and number from Weiss and Netti.
 
+\begin{quote}
 {%
 \parindent 0pt
 \noindent
@@ -39,13 +87,48 @@ Each occurrence of a multiphonic is accompanied by its fingering and number from
   \expandafter\preLilyPondExample
 \fi
 \def\lilypondbook{}%
-\input{0f/lily-bc1929a4-systems.tex}%
+\input{3f/lily-b8d7badf-systems.tex}%
 \ifx\postLilyPondExample \undefined
 \else
   \expandafter\postLilyPondExample
 \fi
 }
+\end{quote}
 
-{\Large Techniques}
+
+\pagebreak
+
+% \setlength{\leftskip}{3cm}
+\begin{center}
+  \begin{tabular}{l}
+
+\textit{Gravity and Center} \\
+Henri Cole \\
+    \phantom{appear before me full of promise but then run away}\\
+  \end{tabular}
+  \end{center}
+
+\vspace{-3em}
+
+\begin{center}
+  \begin{tabular}{l}
+
+I'm sorry I cannot say I love you when you say \\
+you love me. The words, like moist fingers, \\
+appear before me full of promise but then run away \\
+to a narrow black room that is always dark, \\
+where they are silent, elegant, like antique gold, \\
+devouring the thing I feel. I want the force \\
+of attraction to crush the force of repulsion \\
+and my inner and outer worlds to pierce \\
+one another, like a horse whipped by a man. \\
+I don't want words to sever me from reality. \\
+I don't want to need them. I want nothing \\
+to reveal feeling but feeling—--as in freedom, \\
+or the knowledge of peace in a realm beyond, \\
+or the sound of water poured in a bowl.
+
+  \end{tabular}
+  \end{center}
 
 \end{document}

@@ -10,7 +10,7 @@ sopA = \relative c' {
   \mark \default
   %\once \override TextScript.outside-staff-priority = #2000
   R1
-  ^\tweak extra-offset #'(-4 . 2)
+  ^\tweak extra-offset #'(-6.5 . 2.5)
   ^\tweak outside-staff-priority #2000
   ^\markup { \magnify #1.5 \bold "full of promise" }
   

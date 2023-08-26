@@ -7,7 +7,7 @@ sopF = \relative c' {
   }
   r2
   ^\tweak outside-staff-priority #2000
-  ^\tweak extra-offset #'(-1 . 3)
+  ^\tweak extra-offset #'(-1.5 . 3)
   ^\markup { \magnify #1.5 \bold "...or the sound of water poured into a bowl" } r4 r8 af\mf\> ~
   af2 ~ \tuplet 5/4 { \after 8 \n af8. r8 } r4
   R1 * 6

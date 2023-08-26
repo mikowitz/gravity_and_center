@@ -3,7 +3,7 @@ sopC = \relative c' {
   \tempo 4 = 92
   \tuplet 5/4 { d8([\mf
                 ^\tweak outside-staff-priority #2000
-                ^\tweak extra-offset #'(1.5 . -4)
+                ^\tweak extra-offset #'(1.5 . -2)
                 ^\markup { \magnify #1.5 \bold "I want the force of attraction to crush the force of repulsion" } 
                 
                 ef8.] } \tuplet 5/4 { d8 cs16 d8 } \tuplet 5/4 { cs16 e4 ~ } \tuplet 5/4 { e16 ef8. d16 ~ }
@@ -48,6 +48,7 @@ sopC = \relative c' {
   d8) ef8(\p\< ~ ef4 ~ ef2
   d2\mf\> f8 a ~ a4 ~
   a1) ~
+  \tweak extra-offset #'(0 . 2)
   \mark \default
   \bar "||"
 }

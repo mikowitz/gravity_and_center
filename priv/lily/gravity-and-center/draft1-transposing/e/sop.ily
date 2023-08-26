@@ -1,6 +1,6 @@
 sopE = \relative c' {
   r2
-  ^\tweak extra-offset #'(1.5 . -3)
+  ^\tweak extra-offset #'(1.5 . -2.5)
   ^\tweak outside-staff-priority #2000
   ^\markup { \magnify #1.5 \bold "I want nothing..." }
   \tuplet 3/2 { r4 ff8-.\mf } \tuplet 3/2 { r af-. r }

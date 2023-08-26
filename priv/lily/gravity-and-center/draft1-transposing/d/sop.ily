@@ -1,7 +1,7 @@
 sopD = \relative c''' {
   \tempo 4 = 84
   a2\pp--
-  ^\tweak extra-offset #'(2 . -4)
+  ^\tweak extra-offset #'(1.5 . -2)
   ^\tweak outside-staff-priority #2000
   ^\markup { \magnify #1.5 \bold "like a horse whipped by a man" }
   r2
@@ -30,7 +30,7 @@ sopD = \relative c''' {
   \after 2. \n
   g1)
   r2 g\pp\< ~
-  <g gs' ds'>1\mp ~
+  <g af' ef'>1\mp ~
   \tweak layer #100
     \tweak whiteout ##t
     \tweak whiteout-style #'outline

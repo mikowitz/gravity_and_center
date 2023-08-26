@@ -1,7 +1,7 @@
 TIMESTAMP = $(shell date +"%Y%m%d-%H%M")
 
-# default: build_score build_titlepage build_perfnotes compose open
-default: perfnotes
+default: build_score build_titlepage build_perfnotes compose open
+# default: perfnotes
 
 compose:
 	pdftk titlepage.pdf perfnotes.pdf score.pdf cat output $(TIMESTAMP).pdf

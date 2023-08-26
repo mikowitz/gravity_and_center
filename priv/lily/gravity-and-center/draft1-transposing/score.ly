@@ -159,6 +159,12 @@
 
 \paper {
   % annotate-spacing = ##t
+   #(define fonts
+      (set-global-fonts
+       #:roman "Liberation Serif"
+       ; unnecessary if the staff size is default
+       #:factor (/ staff-height pt 20)
+      ))
   #(set-paper-size "my size")
   indent = 0
   top-margin = 0.75\in
