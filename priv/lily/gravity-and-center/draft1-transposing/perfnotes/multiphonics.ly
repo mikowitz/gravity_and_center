@@ -4,6 +4,9 @@
 
 {
   \omit Staff.TimeSignature
+  \stopStaff
+  s1*2
+  \startStaff
   <a' bf'' f'''>1^\multiSop
   \stopStaff
   s1*6

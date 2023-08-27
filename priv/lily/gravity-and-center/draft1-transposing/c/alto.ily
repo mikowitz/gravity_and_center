@@ -7,7 +7,7 @@ altoC = \relative c' {
   af1)
   R1
   R1\fermata
-  R1\fermata
+  r4\fermata r2 r4\fermata
   R1
   r2 r4 r8 
   \shape #'((0 . 0) (0 . 1) (0 . 1) (0 . 0)) Slur

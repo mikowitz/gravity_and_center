@@ -1,8 +1,9 @@
 \documentclass{article}
 \usepackage[papersize={12in, 9in}, margin=1.5in]{geometry}
 \parindent=0pt
-\parskip=12pt
+\parskip=8pt
 \pagestyle{empty}
+\usepackage{lilyglyphs}
 \usepackage{fontspec}
 \setmainfont{Liberation Serif}
 \begin{document}
@@ -10,10 +11,13 @@
   {\Huge Performance Notes}
 \end{center}
 
+\vspace{2em}
+
+
 {\Large Techniques}
 
-\textbf{Fluttertongue}: this technique is marked by an unmeasured tremolo on a note's stem, and the text "flz".
-\lilypond[inline,staffsize=11]{
+\textbf{Fluttertongue}: this technique is marked by an unmeasured tremolo on a note's stem, and the text ``flz.''
+\lilypond[inline,staffsize=12]{
   {
     \override Flag.stencil = #flat-flag
     \numericTimeSignature
@@ -22,13 +26,15 @@
   }
 }
 
+\vspace{1em}
+
 \textbf{Slow timbral trills}:
-This technique is indicated by the text "slow timbral trill" in the score.
-\lilypond[inline,staffsize=11,raggedright] {
-  \language "english"
+This technique is indicated by the text ``slow timbral trill'' in the score.
+\lilypond[inline,staffsize=12]{
+\language "english"
 {
   \numericTimeSignature
-  r4 bf''4^\markup { "slow timbral trill" } ~ bf''2 ~ bf''1
+  \time 7/4 r2 r4 g''1^"slow timbral trill" ~ \time 4/4 g''2 s2
 }
 }
 
@@ -40,6 +46,22 @@ be made to coordinate the trill speeds; in fact, if anything, please try to keep
 
 Fingerings are left up to the player.
 
+\vspace{2em}
+
+{\large Accidentals}
+
+In addition to the standard chromatic accidentals \hspace{.2em} \flat, \sharp, and \natural, the following accidentals are used:
+
+\lilyGlyph[scale=1.5,raise=.5]{accidentals.sharp.slashslash.stem} \hspace{.2em} one quarter sharp
+
+\lilyGlyph[scale=1.5,raise=.5]{accidentals.natural.arrowdown} \hspace{.5em}
+\lilyGlyph[scale=1.5,raise=.5]{accidentals.sharp.arrowdown} \hspace{.5em} $\sim$1/8 tone lower
+
+These microtonal adjustments are derived from the pitch content of the multiphonics used in \textit{Gravity and Center} (see notes below), and where they appear independent of those multiphonics, should be tuned to
+match the pitch in the multiphonic as closely as possible.
+
+Throughout, except where explicitly canceled, accidentals persist to the end of a bar.
+
 \pagebreak
 
 {\Large Multiphonics}
@@ -49,12 +71,20 @@ through the final sections of \textit{Gravity and Center} begin to appear. Each 
 a single multiphonic. These fingerings and resulting pitches are taken from \textit{The Techniques of
 Saxophone Playing} by Marcus Weiss and Giorgio Netti.
 
-Each occurrence of a multiphonic is accompanied by its fingering and number from Weiss and Netti.
+Each occurrence of a multiphonic is accompanied by its fingering and number from Weiss and Netti, which
+are provided below as well.
 
-\lilypondfile[noindent,quote,staffsize=11]{./perfnotes/multiphonics.ly}
+\vspace{4em}
+
+\lilypondfile[noindent,quote,staffsize=16]{./perfnotes/multiphonics.ly}
 
 
-\pagebreak
+\newpage
+
+\phantom{ok}
+
+\vfill
+
 
 % \setlength{\leftskip}{3cm}
 \begin{center}
@@ -88,5 +118,10 @@ or the sound of water poured in a bowl.
 
   \end{tabular}
   \end{center}
+
+
+\vfill
+
+\phantom{ok}
 
 \end{document}

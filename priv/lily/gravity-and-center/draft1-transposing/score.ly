@@ -1,4 +1,4 @@
-\version "2.24.1"
+\version "2.25.8"
 \language "english"
 
 \include "multiphonics.ily"
@@ -142,6 +142,9 @@
       (padding . 4)
       (stretchability . 0)
     )
+
+    \override DynamicText.font-name = #"Liberation Serif, Bold Italic"
+    \override DynamicText.font-size = 1.5
   }
 
   \context {
@@ -152,6 +155,7 @@
     \override Flag.stencil = #flat-flag
     \override Hairpin.to-barline = ##f
     \override Beam.damping = #+inf.0
+    \override TupletBracket.damping = #+inf.0
   }
 }
 
@@ -159,12 +163,13 @@
 
 \paper {
   % annotate-spacing = ##t
-   #(define fonts
-      (set-global-fonts
-       #:roman "Liberation Serif"
-       ; unnecessary if the staff size is default
-       #:factor (/ staff-height pt 20)
-      ))
+   % #(define fonts
+   %    (set-global-fonts
+   %     #:roman "Liberation Serif"
+   %     ; unnecessary if the staff size is default
+   %     #:factor (/ staff-height pt 20)
+   %    ))
+   property-defaults.fonts.serif = "Liberation Serif"
   #(set-paper-size "my size")
   indent = 0
   top-margin = 0.75\in

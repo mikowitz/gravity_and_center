@@ -1,2 +1,0 @@
-@image{7d/lily-b12353a0-1}
-@c eof

@@ -1,36 +1,102 @@
 \documentclass{article}
-
+\usepackage[papersize={12in, 9in}, margin=1.5in]{geometry}
+\parindent=0pt
+\parskip=8pt
+\pagestyle{empty}
+\usepackage{lilyglyphs}
+\usepackage{fontspec}
+\setmainfont{Liberation Serif}
 \usepackage{graphics}
 \begin{document}
+\begin{center}
+  {\Huge Performance Notes}
+\end{center}
 
-Documents for \verb+lilypond-book+ may freely mix music and text.
+\vspace{2em}
 
-For example,
 
-{%
-\parindent 0pt
-\noindent
+{\Large Techniques}
+
+\textbf{Fluttertongue}: this technique is marked by an unmeasured tremolo on a note's stem, and the text ``flz.''
+%
 \ifx\preLilyPondExample \undefined
 \else
   \expandafter\preLilyPondExample
 \fi
-\def\lilypondbook{}%
-\input{ac/lily-941a492d-systems.tex}%
+\raisebox{-0.3\height}{\input{ed/lily-c42c3db7-systems.tex}}%
 \ifx\postLilyPondExample \undefined
 \else
   \expandafter\postLilyPondExample
 \fi
-}
+{}
 
-Options are put in brackets.
+\vspace{1em}
+
+\textbf{Slow timbral trills}:
+This technique is indicated by the text ``slow timbral trill'' in the score.
+%
+\ifx\preLilyPondExample \undefined
+\else
+  \expandafter\preLilyPondExample
+\fi
+\raisebox{-0.3\height}{\input{be/lily-296ba090-systems.tex}}%
+\ifx\postLilyPondExample \undefined
+\else
+  \expandafter\postLilyPondExample
+\fi
+{}
+
+These trills should be played relatively slowly, but can, and should, have noticeable
+variation in trill speed.
+
+When more than one player has this direction at the same time, no effort should
+be made to coordinate the trill speeds; in fact, if anything, please try to keep them un-coordinated.
+
+Fingerings are left up to the player.
+
+\vspace{2em}
+
+{\large Accidentals}
+
+In addition to the standard chromatic accidentals \hspace{.2em} \flat, \sharp, and \natural, the following accidentals are used:
+
+\lilyGlyph[scale=1.5,raise=.5]{accidentals.sharp.slashslash.stem} \hspace{.2em} one quarter sharp
+
+\lilyGlyph[scale=1.5,raise=.5]{accidentals.natural.arrowdown} \hspace{.5em}
+\lilyGlyph[scale=1.5,raise=.5]{accidentals.sharp.arrowdown} \hspace{.5em} $\sim$1/8 tone lower
+
+These microtonal adjustments are derived from the pitch content of the multiphonics used in \textit{Gravity and Center} (see notes below), and where they appear independent of those multiphonics, should be tuned to
+match the pitch in the multiphonic as closely as possible.
+
+Throughout, except where explicitly canceled, accidentals persist to the end of a bar.
+
+\pagebreak
+
+{\Large Multiphonics}
+
+Starting in section\hspace{-.5em}{%
+\parindent 0pt
+\noindent
+\ifx\preLilyPondExample \undefined
+\else
+  \expandafter\preLilyPondExample
+\fi
+\input{c3/lily-b5d3d2cc-systems.tex}%
+\ifx\postLilyPondExample \undefined
+\else
+  \expandafter\postLilyPondExample
+\fi
+} multiphonics that recur
+through the final sections of \textit{Gravity and Center} begin to appear. Each saxophone is given
+a single multiphonic. These fingerings and resulting pitches are taken from \textit{The Techniques of
+Saxophone Playing} by Marcus Weiss and Giorgio Netti.
+
+Each occurrence of a multiphonic is accompanied by its fingering and number from Weiss and Netti, which
+are provided below as well.
+
+\vspace{4em}
 
 \begin{quote}
-\noindent
-\begin{verbatim}
-\relative {
-  c'2 e2 \tuplet 3/2 { f8 a b } a2 e4
-}
-\end{verbatim}
 {%
 \parindent 0pt
 \noindent
@@ -38,8 +104,7 @@ Options are put in brackets.
 \else
   \expandafter\preLilyPondExample
 \fi
-\def\lilypondbook{}%
-\input{7d/lily-b12353a0-systems.tex}%
+\input{c9/lily-c0a2f2bd-systems.tex}%
 \ifx\postLilyPondExample \undefined
 \else
   \expandafter\postLilyPondExample
@@ -47,5 +112,50 @@ Options are put in brackets.
 }
 \end{quote}
 
+
+\newpage
+
+\phantom{ok}
+
+\vfill
+
+
+% \setlength{\leftskip}{3cm}
+\begin{center}
+  \begin{tabular}{l}
+
+\textit{Gravity and Center} \\
+Henri Cole \\
+    \phantom{appear before me full of promise but then run away}\\
+  \end{tabular}
+  \end{center}
+
+\vspace{-3em}
+
+\begin{center}
+  \begin{tabular}{l}
+
+I'm sorry I cannot say I love you when you say \\
+you love me. The words, like moist fingers, \\
+appear before me full of promise but then run away \\
+to a narrow black room that is always dark, \\
+where they are silent, elegant, like antique gold, \\
+devouring the thing I feel. I want the force \\
+of attraction to crush the force of repulsion \\
+and my inner and outer worlds to pierce \\
+one another, like a horse whipped by a man. \\
+I don't want words to sever me from reality. \\
+I don't want to need them. I want nothing \\
+to reveal feeling but feeling—--as in freedom, \\
+or the knowledge of peace in a realm beyond, \\
+or the sound of water poured in a bowl.
+
+  \end{tabular}
+  \end{center}
+
+
+\vfill
+
+\phantom{ok}
 
 \end{document}

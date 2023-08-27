@@ -29,8 +29,8 @@ open_titlepage:
 	open titlepage.pdf
 
 build_perfnotes:
-	lilypond-book --output=. --pdf perfnotes.lytex
-	xelatex perfnotes.tex
+	lilypond-book --output=out --pdf perfnotes.lytex
+	cd out && xelatex perfnotes.tex && cp perfnotes.pdf ../ && cd ..
 
 open_perfnotes:
-	open perfnotes.pdf
+	open out/perfnotes.pdf
